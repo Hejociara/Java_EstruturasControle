@@ -1,15 +1,29 @@
+import java.util.Scanner;
+
 public class AnoBissexto {
     /**
      * @author: Hejociara
      *
-     * Fórmula para calcular ano bissesto
-     * 1- Se o ano for uniformemente divisível por 4, vá para a etapa 2. Caso contrário, vá para a etapa 5.
-     * 2- Se o ano for uniformemente divisível por 100, vá para a etapa 3. Caso contrário, vá para a etapa 4.
-     * 3- Se o ano for uniformemente divisível por 400, vá para a etapa 4. Caso contrário, vá para a etapa 5.
-     * 4- O ano é bissexto (tem 366 dias).
-     * 5- O ano não é um ano bissexto (tem 365 dias).
+     * Divisível por 4. Sendo assim, a divisão é exata com o resto igual a zero;
+     * Não pode ser divisível por 100. Com isso, a divisão não é exata, ou seja, deixa resto diferente de zero;
+     * Pode ser que seja divisível por 400. Caso seja divisível por 400, a divisão deve ser exata, deixando o resto igual a zero.
      */
     public static void main(String[] args) {
-        System.out.println();
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Digite o ano: ");
+        int ano = entrada.nextInt();
+
+        boolean bissexto = ano % 4 == 0 && ((ano % 100)!= 0 ||
+                ano % 400 == 0);
+
+        if(bissexto == true)
+            System.out.println(ano + " é um ano bissexto");
+        else {
+            System.out.println(ano + " não é uma ano bissexto");
+        }
+
+        entrada.close();
+
     }
 }
