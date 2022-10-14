@@ -11,17 +11,21 @@ public class Exercicio3 {
         Scanner entrada = new Scanner(System.in);
 
         System.out.println("Digite uma nota: ");
-        double nota1;
+        double nota1 = entrada.nextDouble();
 
         System.out.println("Digite segunda nota: ");
-        double nota2;
+        double nota2 = entrada.nextDouble();
 
-        double media = (nota1 + nota2) /2;
+        double media = (nota1 + nota2) /2 ;
+        System.out.println(media);
 
         if (media >= 7.0)
             System.out.println("Aprovado");
-        if(media < 7)
-
+        else if(media >= 4)
+            System.out.println("Recuperação");
+        else {
+            System.out.println("Reprovado");
+        }
         entrada.close();
     }
 }
