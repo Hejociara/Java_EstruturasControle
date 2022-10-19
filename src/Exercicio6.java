@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * @author: Hejociara
  */
@@ -8,6 +10,18 @@
 // e imprima se o número inserido é maior ou menor do que o número armazenado.
 public class Exercicio6 {
     public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Digite um número de 0-100: ");
+        int continuar;
+        int numeroSorteado;
+        int tentativas;
+        int numero;
+
+
+        System.out.println("");
+
+        entrada.close();
 
     }
 }
