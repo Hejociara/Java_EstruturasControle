@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -18,10 +19,39 @@ public class Exercicio6 {
         int tentativas;
         int numero;
 
+        do {
+            System.out.println("Sorteio de número entre 0 a 100");
+            Random numeroAleatorio = new Random();
+            numeroSorteado = numeroAleatorio.nextInt(50);
 
-        System.out.println("");
+            System.out.println("Tente adivinhar!");
+            tentativas = 0;
+            do {
+                tentativas++;
+                System.out.printf("Tentativa %d: ", tentativas);
+                numero = entrada.nextInt();
+
+                if (numero > numeroSorteado) {
+
+                    System.out.printf("\nO numero sorteado e menor que %d\n\n", numero);
+
+                } else if (numero < numeroSorteado) {
+
+                    System.out.printf("\nO numero sorteado e maior que %d\n\n", numero);
+
+                } else {
+
+                    System.out.printf("\nParabens! Voce acertou o numero em %d tentativas!\n\n", tentativas);
+
+                }
+
+            } while (numero != numeroSorteado);
+
+            System.out.println("Digite 0 para sair, ou qualquer outro numero para continuar: ");
+            continuar = entrada.nextInt();
+
+        } while (continuar != 0);
 
         entrada.close();
-
     }
 }
