@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * @author: Hejociara
  */
@@ -7,6 +9,18 @@
 // Tente utilizar a estrutura do while.
 public class Exercicio7 {
     public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
 
+        int num = 0;
+        int numSoma =0;
+
+        while (num >= 0){
+            System.out.println("Digite um numero inteiro: ");
+            num = entrada.nextInt();
+            if (num>=0){
+
+            }
+        }
+        entrada.close();
     }
 }
