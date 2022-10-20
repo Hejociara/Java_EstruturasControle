@@ -17,10 +17,9 @@ public class Exercicio7 {
         while (num >= 0){
             System.out.println("Digite um numero inteiro: ");
             num = entrada.nextInt();
-            if (num>=0){
+            if (num >=0){
                 numSoma += num;
-                System.out.printf("Soma: %d", numSoma);
-
+                System.out.printf("Soma: %d\n", numSoma);
             }
         }
         entrada.close();
