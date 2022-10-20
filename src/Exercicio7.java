@@ -18,6 +18,8 @@ public class Exercicio7 {
             System.out.println("Digite um numero inteiro: ");
             num = entrada.nextInt();
             if (num>=0){
+                numSoma += num;
+                System.out.printf("Soma: %d", numSoma);
 
             }
         }
